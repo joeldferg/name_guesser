@@ -1,0 +1,32 @@
+print "Let me try to guess your name."
+name = []
+cap_letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u','v', 'w', 'x', 'y', 'z']
+ 
+#First letter
+response = "n"
+while response == "n":
+	for i in cap_letters:
+		print "Is the first letter of your name %s?" % i
+		response = raw_input("(y/n) > ")
+		if response == "y":
+			name.append(i)
+			break
+
+#other letters
+response = "n"
+while response == "n":
+	for j in letters:
+		print "Is the next letter of your name %s?" % j
+		response = raw_input("(y/n) > ")
+		if response == "y":
+			name.append(j)
+ 			print "Is it also the last letter of your name?"
+ 			response = raw_input("(y/n) > ")
+ 			if response == "y":
+ 				break
+			else:
+				continue
+print "Ahhhhhhh, so your name is... "
+print name
